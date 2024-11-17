@@ -1,0 +1,28 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+body {
+  min-height: 100vh;
+}
+
+body {
+  /* height: 100vh; */
+  --_mesh-gradient-blur: 50px;
+  --_mesh-gradient-blend-mode: normal;
+
+  background:
+    radial-gradient(at 69% 16%, #594b88 0, transparent 50%),
+    radial-gradient(at 7% 33%, #784b88 0, transparent 50%),
+    radial-gradient(at 73% 50%, #884b7a 0, transparent 50%),
+    radial-gradient(at 79% 52%, #7a884b 0, transparent 50%),
+    radial-gradient(at 27% 95%, #4b8859 0, transparent 50%),
+    radial-gradient(at 87% 94%, #4a266d 0, transparent 50%) #001138;
+
+  &:not(*) {
+    mix-blend-mode: var(--_mesh-gradient-blend-mode);
+    filter: blur(var(--_mesh-gradient-blur));
+  }
+}
