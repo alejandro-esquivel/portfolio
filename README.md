@@ -1,4 +1,6 @@
-# React + Vite
+# Alejandro's portfolio
+
+This is my portfolio's repository.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
