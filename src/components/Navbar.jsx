@@ -11,7 +11,7 @@ function Navbar() {
 
   return (
     <motion.nav initial={{ y: -50 }} animate={{ y: 5 }}
-      className={` z-10 flex flex-col justify-between w-11/12 px-6 py-3 mx-auto mt-4 lg:flex-row lg:w-8/12 xl:w-6/12 rounded-2xl backdrop-blur-md bg-slate-50/5`}
+      className={`z-10 sticky flex flex-col justify-between w-11/12 px-6 py-3 mx-auto mt-4 lg:flex-row lg:w-8/12 xl:w-6/12 rounded-2xl backdrop-blur-xl bg-slate-50/5`}
     >
       <div className="self-end lg:hidden" onClick={toggleBurgerState}>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
