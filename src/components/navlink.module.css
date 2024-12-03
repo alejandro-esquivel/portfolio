@@ -1,0 +1,11 @@
+.navlink {
+  a {
+    transition: text-shadow .1s ease-out;
+  }
+
+  /* &:hover a {
+    text-shadow: 0 0 10px rgba(248, 250, 252, 1);
+    transition-timing-function: ease-in;
+  } */
+
+}
