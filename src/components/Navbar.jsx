@@ -11,7 +11,7 @@ function Navbar() {
 
   return (
     <motion.nav initial={{ y: -50 }} animate={{ y: 5 }}
-      className={`z-10 sticky flex flex-col justify-between w-11/12 px-6 py-3 mx-auto mt-4 lg:flex-row lg:w-8/12 xl:w-6/12 rounded-2xl backdrop-blur-xl bg-slate-50/5`}
+      className={`z-10 fixed left-0 right-0 flex flex-col justify-between w-11/12 px-6 py-3 mx-auto mt-4 lg:flex-row lg:w-8/12 xl:w-6/12 rounded-2xl backdrop-blur-xl bg-slate-50/5`}
     >
       <div className="self-end lg:hidden" onClick={toggleBurgerState}>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
@@ -20,7 +20,7 @@ function Navbar() {
         </svg>
       </div>
       <div className="lg:block"></div>
-      <ul className={` ${burgerIsActive ? 'scale-x-100' : 'scale-x-0'} lg:scale-x-100 lg:flex flex-col justify-center gap-3 text-xl lg:flex-row`}>
+      <ul className={` ${burgerIsActive ? ' h-[initial] flex' : 'hidden h-0'} transition-all lg:h-[initial] lg:flex flex-col justify-center gap-3 text-xl lg:flex-row`}>
         <Navlink>
           <a href="">Home</a>
         </Navlink>
