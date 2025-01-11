@@ -79,6 +79,10 @@ function Navbar() {
     }
   }, [burgerIsActive])
 
+
+  // TODO: Modify the navbar so that when you scroll down the blob moves while also snapping to the navigation links related to the current section.
+
+
   return (
     <motion.nav initial={{ y: -50 }} animate={{ y: 5 }} ref={navRef}
       className={`z-10 fixed left-0 right-0 flex flex-col bg-slate-200
