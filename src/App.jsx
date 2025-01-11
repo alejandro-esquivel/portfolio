@@ -1,12 +1,17 @@
 import Navbar from './components/nav/Navbar.jsx';
-import Hero from './components/Hero.jsx';
+
+import { lazy, Suspense } from 'react';
 
 function App() {
+
+  const Hero = lazy(() => import('./components/Hero.jsx'));
 
   return (
     <>
       <Navbar />
-      <Hero/>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Hero />
+      </Suspense>
     </>
   )
 }

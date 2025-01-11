@@ -13,7 +13,10 @@ export default {
         'gradient': {
           to: { 'background-position': '200% center' },
         }
-      }
+      },
+      fontFamily: {
+        serif: ['Brother Signature', 'cursive', ],
+      },
     },
   },
   plugins: [],

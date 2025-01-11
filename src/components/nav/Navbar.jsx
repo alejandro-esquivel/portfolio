@@ -66,7 +66,7 @@ function Navbar() {
 
   const handleNavlinkLeave = () => {
     console.log("Leaving...");
-    // setNavlinkIsHovered(false);
+    setNavlinkIsHovered(false);
   }
 
   useEffect(() => {
@@ -88,7 +88,7 @@ function Navbar() {
         <BurgerIcon isOpen={burgerIsActive} />
       </div>
       <div className="lg:block"></div>
-      <ul className={` ${burgerIsActive ? ' h-[initial] flex' : 'hidden h-0'} transition-all lg:h-[initial] lg:flex flex-col justify-center gap-3 text-xl lg:flex-row`}
+      <ul className={` ${burgerIsActive ? ' h-[initial] flex' : 'hidden h-0'} transition-all lg:h-[initial] lg:flex flex-col justify-center gap-3 text-xl xl:text-2xl lg:flex-row`}
         onMouseLeave={handleNavlinkLeave}>
         <span className={`absolute top-0 left-0 hidden px-3 py-2 transition-all duration-300 bg-blue-700 rounded-lg ${navlinkIsHovered ? 'lg:block' : ''}`} ref={blobRef} ></span>
         {navLinkList.map((navLink) => (

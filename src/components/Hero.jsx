@@ -36,7 +36,7 @@ function Hero() {
           Hi, I&apos;m <span className="font-bold text-blue-500">Alejandro Esquivel</span>.<br /> A<span ref={devRef}></span>
         </h1>
         <div className="self-start text-xl lg:text-3xl justify-self-start text-slate-200">
-          <p>I solve problems, make things work and look good.</p>
+          <p>I solve problems, make things work and look <span className="text-[4.2rem] text-lime-400 ml-4 leading-10" style={{ fontFamily: 'Brother Signature' }}>fancy</span>.</p>
         </div>
       </section>
     </>
