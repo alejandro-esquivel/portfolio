@@ -4,12 +4,12 @@ import { lazy, Suspense } from 'react';
 
 function App() {
 
-  const Hero = lazy(() => import('./components/Hero.jsx'));
+  const Hero = lazy(() => import('./components/hero/Hero.jsx'));
 
   return (
     <>
       <Navbar />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<></>}>
         <Hero />
       </Suspense>
     </>

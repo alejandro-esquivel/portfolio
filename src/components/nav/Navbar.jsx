@@ -65,7 +65,6 @@ function Navbar() {
   }
 
   const handleNavlinkLeave = () => {
-    console.log("Leaving...");
     setNavlinkIsHovered(false);
   }
 
@@ -79,22 +78,35 @@ function Navbar() {
     }
   }, [burgerIsActive])
 
-
   // TODO: Modify the navbar so that when you scroll down the blob moves while also snapping to the navigation links related to the current section.
 
 
   return (
-    <motion.nav initial={{ y: -50 }} animate={{ y: 5 }} ref={navRef}
-      className={`z-10 fixed left-0 right-0 flex flex-col bg-slate-200
-       ${burgerIsActive ? 'translate-x-0' : 'translate-x-full'} lg:translate-x-0 transition-all duration-300 justify-between w-11/12 px-6 py-3 mx-auto mt-4 lg:flex-row lg:w-8/12 xl:w-6/12 rounded-2xl ${burgerIsActive ? 'bg-opacity-10 backdrop-blur-md' : 'bg-opacity-0'}`}
+    <motion.nav
+      initial={{ opacity: 0, y: -80 }}
+      animate={{ opacity: 1, y: 5 }}
+      transition={{ ease: "linear", delay: 0 }}
+      ref={navRef}
+      className={`z-10 fixed left-0 right-0 flex flex-col bg-slate-200 duration-500
+       ${burgerIsActive ? 'translate-x-0' : 'translate-x-full'} lg:translate-x-0 transition-all justify-between w-11/12 px-6 py-3 mx-auto mt-4 lg:flex-row lg:w-10/12 xl:w-8/12 rounded-2xl ${burgerIsActive ? 'bg-opacity-10 backdrop-blur-md' : 'bg-opacity-0'}`}
     >
       <div className="self-end lg:hidden" onClick={toggleBurgerState}>
         <BurgerIcon isOpen={burgerIsActive} />
       </div>
       <div className="lg:block"></div>
-      <ul className={` ${burgerIsActive ? ' h-[initial] flex' : 'hidden h-0'} transition-all lg:h-[initial] lg:flex flex-col justify-center gap-3 text-xl xl:text-2xl lg:flex-row`}
+      <ul className={`hidden lg:flex justify-center gap-3 text-xl xl:text-2xl flex-row`}
         onMouseLeave={handleNavlinkLeave}>
         <span className={`absolute top-0 left-0 hidden px-3 py-2 transition-all duration-300 bg-blue-700 rounded-lg ${navlinkIsHovered ? 'lg:block' : ''}`} ref={blobRef} ></span>
+        {navLinkList.map((navLink) => (
+          <Navlink url={navLink.url} onClick={handleNavlinkClick}
+            onMouseOver={handleNavlinkHover}
+            key={navLink.url}>
+            {navLink.text}
+          </Navlink>
+        ))}
+      </ul>
+      <ul className={` ${burgerIsActive ? ' h-[initial] flex' : 'hidden h-0'} absolute left-0 right-0 top-[4.5rem] rounded-lg px-2 py-4 bg-slate-800 w-full mx-0 lg:hidden flex-col justify-center gap-3 text-xl xl:text-2xl`}
+        onMouseLeave={handleNavlinkLeave}>
         {navLinkList.map((navLink) => (
           <Navlink url={navLink.url} onClick={handleNavlinkClick}
             onMouseOver={handleNavlinkHover}
