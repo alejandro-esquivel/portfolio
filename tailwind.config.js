@@ -17,6 +17,7 @@ export default {
       fontFamily: {
         serif: ['Brother Signature', 'cursive', ],
       },
+      
     },
   },
   plugins: [],
