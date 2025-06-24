@@ -1,10 +1,9 @@
-import Navbar from './components/nav/Navbar.jsx';
+import Navbar from './components/nav/Navbar.jsx'
 
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense } from 'react'
 
-function App() {
-
-  const Hero = lazy(() => import('./components/hero/Hero.jsx'));
+function App () {
+  const Hero = lazy(() => import('./components/hero/Hero.jsx'))
 
   return (
     <>
