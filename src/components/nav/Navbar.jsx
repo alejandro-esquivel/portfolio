@@ -125,7 +125,7 @@ function Navbar () {
       <ul
         className={` ${
           burgerIsActive ? ' h-[initial] flex' : 'hidden h-0'
-        } absolute left-0 right-0 top-[4.5rem] rounded-lg px-2 py-4 bg-slate-800 w-full mx-0 lg:hidden flex-col justify-center gap-3 text-xl xl:text-2xl`}
+        } absolute left-0 right-0 top-18 rounded-lg px-2 py-4 bg-slate-800 w-full mx-0 lg:hidden flex-col justify-center gap-3 text-xl xl:text-2xl`}
         onMouseLeave={handleNavlinkLeave}
       >
         {navLinkList.map(navLink => (

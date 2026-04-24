@@ -8,7 +8,7 @@ function Hero() {
       initial={{ opacity: 0, y: -50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: .7, delay: 0.3 }}
-      className='flex gap-6 flex-col w-11/12 h-[100vh] mx-auto justify-center align-middle lg:w-10/12 xl:w-8/12'
+      className='flex gap-6 flex-col w-11/12 h-screen mx-auto justify-center align-middle lg:w-10/12 xl:w-8/12'
     >
       <Description />
       <div className='self-start text-xl lg:text-3xl justify-self-start text-slate-200'>
